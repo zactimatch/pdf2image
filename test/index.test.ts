@@ -278,7 +278,7 @@ describe("PDF2Pic Core", () => {
       format: "png",
       width: 768,
       height: 512,
-      saveFilename: "test-3"
+      saveFilename: "test-4"
     }
 
     const buffer = readFileSync("./test/data/pdf1.pdf");
@@ -287,15 +287,15 @@ describe("PDF2Pic Core", () => {
 
     await convert.bulk(-1);
 
-    const info1 = await gm.identify("./dump/fromfiletest/test-3.1.png") as gm.ImageInfo;
-    const info2 = await gm.identify("./dump/fromfiletest/test-3.2.png") as gm.ImageInfo;
-    const info3 = await gm.identify("./dump/fromfiletest/test-3.3.png") as gm.ImageInfo;
-    const info4 = await gm.identify("./dump/fromfiletest/test-3.4.png") as gm.ImageInfo;
-    const info5 = await gm.identify("./dump/fromfiletest/test-3.5.png") as gm.ImageInfo;
-    const info6 = await gm.identify("./dump/fromfiletest/test-3.6.png") as gm.ImageInfo;
-    const info7 = await gm.identify("./dump/fromfiletest/test-3.7.png") as gm.ImageInfo;
-    const info8 = await gm.identify("./dump/fromfiletest/test-3.8.png") as gm.ImageInfo;
-    const info9 = await gm.identify("./dump/fromfiletest/test-3.9.png") as gm.ImageInfo;
+    const info1 = await gm.identify("./dump/fromfiletest/test-4.1.png") as gm.ImageInfo;
+    const info2 = await gm.identify("./dump/fromfiletest/test-4.2.png") as gm.ImageInfo;
+    const info3 = await gm.identify("./dump/fromfiletest/test-4.3.png") as gm.ImageInfo;
+    const info4 = await gm.identify("./dump/fromfiletest/test-4.4.png") as gm.ImageInfo;
+    const info5 = await gm.identify("./dump/fromfiletest/test-4.5.png") as gm.ImageInfo;
+    const info6 = await gm.identify("./dump/fromfiletest/test-4.6.png") as gm.ImageInfo;
+    const info7 = await gm.identify("./dump/fromfiletest/test-4.7.png") as gm.ImageInfo;
+    const info8 = await gm.identify("./dump/fromfiletest/test-4.8.png") as gm.ImageInfo;
+    const info9 = await gm.identify("./dump/fromfiletest/test-4.9.png") as gm.ImageInfo;
 
     expect(info1).to.haveOwnProperty("format");
     expect(info1.format).to.be.equal("PNG");
@@ -377,7 +377,7 @@ describe("PDF2Pic Core", () => {
       format: "png",
       width: 768,
       height: 512,
-      saveFilename: "test-3"
+      saveFilename: "test-5"
     }
 
     const b64 = readFileSync("./test/data/pdf1.pdf", "base64");
@@ -386,15 +386,15 @@ describe("PDF2Pic Core", () => {
 
     await convert.bulk(-1);
 
-    const info1 = await gm.identify("./dump/fromfiletest/test-3.1.png") as gm.ImageInfo;
-    const info2 = await gm.identify("./dump/fromfiletest/test-3.2.png") as gm.ImageInfo;
-    const info3 = await gm.identify("./dump/fromfiletest/test-3.3.png") as gm.ImageInfo;
-    const info4 = await gm.identify("./dump/fromfiletest/test-3.4.png") as gm.ImageInfo;
-    const info5 = await gm.identify("./dump/fromfiletest/test-3.5.png") as gm.ImageInfo;
-    const info6 = await gm.identify("./dump/fromfiletest/test-3.6.png") as gm.ImageInfo;
-    const info7 = await gm.identify("./dump/fromfiletest/test-3.7.png") as gm.ImageInfo;
-    const info8 = await gm.identify("./dump/fromfiletest/test-3.8.png") as gm.ImageInfo;
-    const info9 = await gm.identify("./dump/fromfiletest/test-3.9.png") as gm.ImageInfo;
+    const info1 = await gm.identify("./dump/fromfiletest/test-5.1.png") as gm.ImageInfo;
+    const info2 = await gm.identify("./dump/fromfiletest/test-5.2.png") as gm.ImageInfo;
+    const info3 = await gm.identify("./dump/fromfiletest/test-5.3.png") as gm.ImageInfo;
+    const info4 = await gm.identify("./dump/fromfiletest/test-5.4.png") as gm.ImageInfo;
+    const info5 = await gm.identify("./dump/fromfiletest/test-5.5.png") as gm.ImageInfo;
+    const info6 = await gm.identify("./dump/fromfiletest/test-5.6.png") as gm.ImageInfo;
+    const info7 = await gm.identify("./dump/fromfiletest/test-5.7.png") as gm.ImageInfo;
+    const info8 = await gm.identify("./dump/fromfiletest/test-5.8.png") as gm.ImageInfo;
+    const info9 = await gm.identify("./dump/fromfiletest/test-5.9.png") as gm.ImageInfo;
 
     expect(info1).to.haveOwnProperty("format");
     expect(info1.format).to.be.equal("PNG");
