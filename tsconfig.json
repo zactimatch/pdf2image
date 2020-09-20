@@ -13,7 +13,7 @@
       "esnext"
     ],
     "paths": {
-      "@module/*": ["*"]
+      "@module/*": ["./*"]
     }
   },
   "include": [

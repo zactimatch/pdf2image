@@ -31,7 +31,7 @@ export async function bulkConvert(gm: Graphics, source: string, filePath: string
     return gm.writeImage(clonedStream, (page - 1));
   };
 
-  const pages = await promiseMap(pageNumber, mapCondition, { concurrency: 1 });
+  const pages = await promiseMap(pageNumber as number[], mapCondition, { concurrency: 1 });
 
   // const pages: (Promise<WriteImageResponse> | Promise<ToBase64Response>)[] = pageNumber.map(page => {
   //   if (pageNumber < 1) {
