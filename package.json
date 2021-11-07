@@ -45,7 +45,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yakovmeister/pdf2image.git"
+    "url": "git+https://github.com/zactimatch/pdf2image.git"
   },
   "keywords": [
     "pdf-to-image",
