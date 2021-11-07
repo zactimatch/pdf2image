@@ -20,6 +20,7 @@ jobs:
       - run: sudo apt-get install ghostscript graphicsmagick
       - run: npm install
       - run: npm run build
+      - run: npm login
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
