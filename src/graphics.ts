@@ -69,6 +69,28 @@ export class Graphics {
     });
   }
 
+  public toBuffer(stream: fs.ReadStream, page?: number): Promise<Buffer> {
+    const pageSetup = `${stream.path}[${page}]`;
+
+    return new Promise((resolve, reject) => {
+      this.gmBaseCommand(stream, pageSetup).stream(this.format, (error, stdout) => {
+        let buffer = "";
+        
+        if (error) {
+          return reject(error);
+        }
+
+        stdout
+          .on("data", (data) => {
+            buffer += data.toString("binary");
+          })
+          .on("end", () => {
+            return resolve(Buffer.from(buffer, "binary"));
+          });
+      });
+    });
+  }
+
   public writeImage(stream: fs.ReadStream, page?: number): Promise<WriteImageResponse> {
     const output = this.generateValidFilename(page);
     const pageSetup = `${stream.path}[${page}]`;

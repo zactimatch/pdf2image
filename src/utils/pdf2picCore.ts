@@ -12,7 +12,7 @@ export function pdf2picCore(source: string, filePath: string | Buffer, options =
 
   options = { ...defaultOptions, ...options };
 
-  const convert = (page = 1, toBase64 = false) => {
+  const convert = (page = 1, toBase64 = false, toBuffer = false) => {
     if (page < 1) {
       throw new Error("Page number should be more than or equal 1");
     }
@@ -28,6 +28,11 @@ export function pdf2picCore(source: string, filePath: string | Buffer, options =
 
   convert.bulk = (pages: number | number[], toBase64 = false): Promise<WriteImageResponse[] | ToBase64Response[]> => {
     return bulkConvert(gm, source, filePath, pages, toBase64);
+  }
+
+  convert.asBuffer = (page: number): Promise<Buffer> => {
+    const stream = convertToStream(source, filePath);
+    return gm.toBuffer(stream, page)
   }
 
   convert.setOptions = (): void => setGMOptions(gm, options);
