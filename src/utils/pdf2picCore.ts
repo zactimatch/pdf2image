@@ -12,7 +12,7 @@ export function pdf2picCore(source: string, filePath: string | Buffer, options =
 
   options = { ...defaultOptions, ...options };
 
-  const convert = (page = 1, toBase64 = false, toBuffer = false) => {
+  const convert = (page = 1, toBase64 = false) => {
     if (page < 1) {
       throw new Error("Page number should be more than or equal 1");
     }
