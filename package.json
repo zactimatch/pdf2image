@@ -1,5 +1,5 @@
 {
-  "name": "pdf2image",
+  "name": "@zactimatch/pdf2image",
   "version": "2.1.4",
   "description": "A utility for converting pdf to image and base64 format.",
   "main": "dist/index.js",
