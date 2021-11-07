@@ -1,5 +1,5 @@
 {
-  "name": "pdf2pic",
+  "name": "pdf2image",
   "version": "2.1.4",
   "description": "A utility for converting pdf to image and base64 format.",
   "main": "dist/index.js",
